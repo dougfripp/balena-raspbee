@@ -21,7 +21,7 @@ services:
       - DEBUG_ZCL=0
       - DEBUG_ZDP=0
       - DEBUG_OTAU=0
-      - TZ=Europe/Oslo
+      - TZ=Europe/London
 
   telegraf:
     build: ./balena-telegraf
@@ -31,5 +31,5 @@ services:
     labels:
       io.resin.features.balena-socket: '1'
     environment:
-      - INFLUX_URL=http://influxdb.hjemme.nett:8086
+      - INFLUX_URL=http://192.168.1.63:8086
       - INFLUX_DB=telegraf
